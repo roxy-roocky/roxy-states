@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://crafayr5dk5rg"]
+
+[ext_resource type="Script" uid="uid://duh7uf4fqal0v" path="res://addons/roxy_states/machine_states.gd" id="1_wplud"]
+[ext_resource type="Script" uid="uid://divjoc81y3jvh" path="res://addons/roxy_states/rs_transition.gd" id="2_73508"]
+[ext_resource type="Script" uid="uid://dqog1iaiughvw" path="res://addons/roxy_states/rs_condition.gd" id="3_askcr"]
+
+[sub_resource type="Resource" id="Resource_42pg5"]
+script = ExtResource("3_askcr")
+FirstNode = NodePath("Node2D")
+FirstProperty = "position:x"
+Operator = 4
+Constant = 10.0
+metadata/_custom_type_script = "uid://dqog1iaiughvw"
+
+[sub_resource type="Resource" id="Resource_askcr"]
+script = ExtResource("2_73508")
+Conditions = Array[ExtResource("3_askcr")]([SubResource("Resource_42pg5")])
+StartState = "IDLE"
+EndState = "LOL"
+metadata/_custom_type_script = "uid://divjoc81y3jvh"
+
+[node name="MachineStates" type="Node" unique_id=1529941092]
+script = ExtResource("1_wplud")
+States = Array[String](["IDLE", "WALK", "DYING"])
+Transitions = Array[ExtResource("2_73508")]([SubResource("Resource_askcr")])
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1051472220]
