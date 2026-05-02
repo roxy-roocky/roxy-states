@@ -16,12 +16,14 @@ metadata/_custom_type_script = "uid://dqog1iaiughvw"
 script = ExtResource("2_73508")
 Conditions = Array[ExtResource("3_askcr")]([SubResource("Resource_42pg5")])
 StartState = "IDLE"
-EndState = "LOL"
+EndState = "MOVING"
 metadata/_custom_type_script = "uid://divjoc81y3jvh"
 
 [node name="MachineStates" type="Node" unique_id=1529941092]
 script = ExtResource("1_wplud")
-States = Array[String](["IDLE", "WALK", "DYING"])
+States = Array[String](["IDLE", "MOVING", "ACTING"])
 Transitions = Array[ExtResource("2_73508")]([SubResource("Resource_askcr")])
+Enabled = true
+StartingState = "IDLE"
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1051472220]

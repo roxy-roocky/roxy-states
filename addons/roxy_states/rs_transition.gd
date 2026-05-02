@@ -8,13 +8,21 @@ enum _Mode {
 }
 
 var States: Array[String]
+var MachineStateName: String
 
 @export var Mode: _Mode
 var StartState: String
+## ALL: all conditions must be true ; ANY: only one condition must be true
 @export var Conditions: Array[RS_Condition]
 var EndState: String
 
-func _get_property_list() -> Array[Dictionary]:
+func CheckStates():
+	if !States.has(StartState):
+		push_warning("State %s not exists in Machine State %s" % [StartState, MachineStateName])
+	if !States.has(EndState):
+		push_warning("State %s not exists in Machine State %s" % [EndState, MachineStateName])
+
+func _get_property_list() -> Array[Dictionary]:	
 	return [{
 		"name": "StartState",
 		"type": TYPE_STRING,

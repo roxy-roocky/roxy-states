@@ -45,7 +45,7 @@ func Eval(owner: Node) -> bool:
 		_Operator.NOT_EGAL:
 			return firstVal != secondVal
 		_Operator.CONTAINS:
-			if typeof(firstVal) == TYPE_STRING:
+			if firstVal.has_method("contains"):
 				return firstVal.contains(secondVal)
 			elif firstVal.has_method("has"):
 				return firstVal.has(secondVal)
