@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://usqqjtb14ypw"]
+
+[ext_resource type="Script" uid="uid://ds8rgvvq5f2p2" path="res://addons/roxy_states/editor/state_node.gd" id="1_5iccs"]
+
+[node name="StateNode" type="GraphNode" unique_id=182498532]
+offset_right = 71.0
+offset_bottom = 78.0
+mouse_filter = 1
+title = "IDLE"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+script = ExtResource("1_5iccs")
+
+[node name="Label" type="Label" parent="." unique_id=1666467837]
+layout_mode = 2

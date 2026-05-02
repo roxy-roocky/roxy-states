@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://yhh0f7wx4g5i"]
+
+[ext_resource type="Script" uid="uid://cd1lqr0ffoxvn" path="res://addons/roxy_states/editor/machine_states_graph.gd" id="1_o23wn"]
+
+[node name="MachineStatesGraph" type="PanelContainer" unique_id=978862725]
+custom_minimum_size = Vector2(0, 100)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o23wn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1104694584]
+layout_mode = 2
+
+[node name="NodeNameLabel" type="Label" parent="VBoxContainer" unique_id=22327892]
+layout_mode = 2
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="GraphEdit" type="GraphEdit" parent="VBoxContainer" unique_id=1697728314]
+layout_mode = 2
+size_flags_vertical = 3
+scroll_offset = Vector2(0, -27)

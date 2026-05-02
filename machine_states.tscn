@@ -19,11 +19,11 @@ StartState = "IDLE"
 EndState = "MOVING"
 metadata/_custom_type_script = "uid://divjoc81y3jvh"
 
-[node name="MachineStates" type="Node" unique_id=1529941092]
+[node name="Node2D" type="Node2D" unique_id=1051472220]
+
+[node name="MachineStates" type="Node" parent="." unique_id=1529941092]
 script = ExtResource("1_wplud")
 States = Array[String](["IDLE", "MOVING", "ACTING"])
 Transitions = Array[ExtResource("2_73508")]([SubResource("Resource_askcr")])
 Enabled = true
 StartingState = "IDLE"
-
-[node name="Node2D" type="Node2D" parent="." unique_id=1051472220]
